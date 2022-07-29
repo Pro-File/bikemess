@@ -1,0 +1,46 @@
+.pageWrapper {
+  min-height: min-content;
+  background: #ffff;
+  padding: 2rem 2rem;
+  > div {
+    padding: 1rem 0rem;
+  }
+}
+
+.fontFamily {
+  font-weight: 700;
+  font-family: Poppins;
+}
+.checkBoxWrapper {
+  display: flex;
+
+  > div {
+    padding: 0rem 1rem 0rem 0rem;
+  }
+}
+.checkBoxWrap {
+  padding-top: 20px;
+  :global(.ant-checkbox-group) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.seletorWrapper {
+  margin-bottom: 0px !important;
+}
+
+.wrap {
+  display: flex;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 600px) {
+  .checkBoxWrapper {
+    display: flex;
+    flex-flow: column;
+
+    > div {
+      padding: 0rem 1rem 0rem 0rem;
+    }
+  }
+}

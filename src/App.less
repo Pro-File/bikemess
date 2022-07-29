@@ -1,0 +1,51 @@
+@import "~antd/dist/antd.less";
+@font-face {
+  font-family: "Montserrat_Bold";
+  src: url(./Fonts/Montserrat/static/Montserrat-ExtraBold.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Montserrat_Regular";
+  src: url(./Fonts/Montserrat/static/Montserrat-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins_Bold";
+  src: url(./Fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./Fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+@import "~antd/dist/antd.less";
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  box-shadow: none !important;
+}
+
+.ant-select {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-select
+  ant-select-lg
+  Select
+  ant-select-single
+  ant-select-show-arrow
+  ant-select-open
+  ant-select-focused {
+  height: 100px !important;
+}
+
+.spin {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

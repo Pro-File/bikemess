@@ -1,0 +1,25 @@
+.DrawerHeader {
+  padding: 2rem;
+}
+.mainDrawer {
+  :global(.ant-drawer-header) {
+    padding: 2rem !important;
+    border-bottom: none !important;
+  }
+  :global(.ant-drawer-header-title) {
+    flex-direction: row-reverse !important;
+  }
+  :global(.ant-drawer-close) {
+    position: absolute !important;
+    font-size: 20px !important;
+    float: right !important;
+    align-self: flex-start !important;
+  }
+  :global(.ant-drawer-body) {
+    padding-top: 0 !important;
+  }
+}
+
+.formBody {
+  padding-bottom: 3rem !important;
+}
