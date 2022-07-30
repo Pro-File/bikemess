@@ -2,12 +2,13 @@ import firebase from 'firebase';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBw2VP2GYGog_RaiWXbTJDQS0LFFX3bFuE",
-  authDomain: "bikemess-a7f7a.firebaseapp.com",
-  projectId: "bikemess-a7f7a",
-  storageBucket: "bikemess-a7f7a.appspot.com",
-  messagingSenderId: "150208857734",
-  appId: "1:150208857734:web:3f8a0f1b371ba700bb3307"
+  apiKey: "AIzaSyBocbADxw1Br9bWjIT2XEjdyD4c8xovetE",
+  authDomain: "bikemess-web.firebaseapp.com",
+  projectId: "bikemess-web",
+  storageBucket: "bikemess-web.appspot.com",
+  messagingSenderId: "405303059980",
+  appId: "1:405303059980:web:bf8f1899b8752024087029",
+  measurementId: "G-FX3JFW8XFK",
 };
 
 // initialize firebase with above config
