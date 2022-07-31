@@ -30,8 +30,8 @@ const Inlinenavbar = () => {
     {
       label: (
         <SimpleParagraph
-          paragraph='BROWSE BY CATEGORIES'
-          size='18'
+          paragraph="BROWSE BY CATEGORIES"
+          size="18"
           bold
           //   css={style.letterSpacing}
         />
@@ -40,10 +40,10 @@ const Inlinenavbar = () => {
       children: [
         {
           label: (
-            <Link to='/categories/mtb'>
+            <Link to="/categories/mtb">
               <SimpleParagraph
-                paragraph='MTB'
-                size='18'
+                paragraph="MTB"
+                size="18"
                 bold
                 //   css={style.letterSpacing}
               />
@@ -53,10 +53,10 @@ const Inlinenavbar = () => {
         },
         {
           label: (
-            <Link to='/categories/road-bike'>
+            <Link to="/categories/road-bike">
               <SimpleParagraph
-                paragraph='Road Bike'
-                size='18'
+                paragraph="Road Bike"
+                size="18"
                 bold
                 //   css={style.letterSpacing}
               />
@@ -66,10 +66,10 @@ const Inlinenavbar = () => {
         },
         {
           label: (
-            <Link to='/categories/foldies'>
+            <Link to="/categories/foldies">
               <SimpleParagraph
-                paragraph='Folding Bike'
-                size='18'
+                paragraph="Folding Bike"
+                size="18"
                 bold
                 //   css={style.letterSpacing}
               />
@@ -79,10 +79,10 @@ const Inlinenavbar = () => {
         },
         {
           label: (
-            <Link to='/categories/e-bike'>
+            <Link to="/categories/e-bike">
               <SimpleParagraph
-                paragraph='E-Bike'
-                size='18'
+                paragraph="E-Bike"
+                size="18"
                 bold
                 //   css={style.letterSpacing}
               />
@@ -94,23 +94,10 @@ const Inlinenavbar = () => {
     },
     {
       label: (
-        <Link to='/brands'>
+        <Link to="/categories-retail">
           <SimpleParagraph
-            paragraph='BROWSE BY BRANDS'
-            size='18'
-            bold
-            //   css={style.letterSpacing}
-          />
-        </Link>
-      ),
-      key: "brands",
-    },
-    {
-      label: (
-        <Link to='/categories-retail'>
-          <SimpleParagraph
-            paragraph='BROWSE BY LBS'
-            size='18'
+            paragraph="BROWSE ALPHABETICALLY"
+            size="18"
             bold
             //   css={style.letterSpacing}
           />
@@ -120,10 +107,10 @@ const Inlinenavbar = () => {
     },
     {
       label: (
-        <Link to='/add-new-listing'>
+        <Link to="/add-new-listing">
           <SimpleParagraph
-            paragraph='ADD NEW LISTINGS'
-            size='18'
+            paragraph="ADD NEW LISTINGS"
+            size="18"
             bold
             //   css={style.letterSpacing}
           />
@@ -133,24 +120,24 @@ const Inlinenavbar = () => {
     },
     (isLoggedIn || auth) && {
       label: (
-        <Link to='/admin-profile'>
-          <SimpleParagraph paragraph='PROFILE' size='18' bold />
+        <Link to="/admin-profile">
+          <SimpleParagraph paragraph="PROFILE" size="18" bold />
         </Link>
       ),
       key: "profile",
     },
     (isLoggedIn || auth) && {
       label: (
-        <Link to='/admin-requests'>
-          <SimpleParagraph paragraph='ADMIN REQUESTS' size='18' bold />
+        <Link to="/admin-requests">
+          <SimpleParagraph paragraph="ADMIN REQUESTS" size="18" bold />
         </Link>
       ),
       key: "admin requests",
     },
     (isLoggedIn || auth) && {
       label: (
-        <Link to='/admin-adminListing'>
-          <SimpleParagraph paragraph='All Listing' size='18' bold />
+        <Link to="/admin-adminListing">
+          <SimpleParagraph paragraph="All Listing" size="18" bold />
         </Link>
       ),
       key: "admin listing",

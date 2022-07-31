@@ -38,30 +38,20 @@ const Footer = () => {
             <Col lg={24}>
               <div className={style.footerTextWrapper}>
                 <div>
-                  <Link to='/brands'>
+                  <Link to="/categories">
                     <SimpleParagraph
-                      paragraph='SEARCH BY BRANDS'
-                      size='14'
+                      paragraph="SEARCH BY CATEGORIES"
+                      size="14"
                       bold
                       css={style.footerText}
                     />
                   </Link>
                 </div>
                 <div>
-                  <Link to='/categories'>
+                  <Link to="/categories">
                     <SimpleParagraph
-                      paragraph='SEARCH BY CATEGORIES'
-                      size='14'
-                      bold
-                      css={style.footerText}
-                    />
-                  </Link>
-                </div>
-                <div>
-                  <Link to='/categories'>
-                    <SimpleParagraph
-                      paragraph='SEARCH BY RETAIL'
-                      size='14'
+                      paragraph="SEARCH ALPHABETICALLY"
+                      size="14"
                       bold
                       css={style.footerText}
                     />
@@ -75,14 +65,14 @@ const Footer = () => {
           <Row gutter={[8, 8]} className={style.rightSectionWrapper}>
             <Col className={style.rightSection}>
               <div className={style.iconWrapper}>
-              <a href={`//www.facebook.com/bikemessapp`} target='_blank'>
-                <Image
-                  src={Facebook}
-                  preview={false}
-                  width={48}
-                  alt='Facebook'
+                <a href={`//www.facebook.com/bikemessapp`} target="_blank">
+                  <Image
+                    src={Facebook}
+                    preview={false}
+                    width={48}
+                    alt="Facebook"
                   />
-                  </a>
+                </a>
                 {/* <Image
                   src={Instagram}
                   preview={false}
@@ -98,16 +88,16 @@ const Footer = () => {
               <div className={style.footerTextWrapper}>
                 <div>
                   <SimpleParagraph
-                    paragraph='TERMS AND CONDITION'
-                    size='14'
+                    paragraph="TERMS AND CONDITION"
+                    size="14"
                     bold
                     css={style.footerText}
                   />
                 </div>
                 <div>
                   <SimpleParagraph
-                    paragraph='PRIVACY AND POLICY'
-                    size='14'
+                    paragraph="PRIVACY AND POLICY"
+                    size="14"
                     bold
                     css={style.footerText}
                   />
@@ -123,9 +113,9 @@ const Footer = () => {
           style={{ display: "flex", justifyContent: "center", width: "100%" }}
         >
           <SimpleParagraph
-            paragraph='COPYRIGHT 2022'
-            size='14'
-            margin='auto'
+            paragraph="COPYRIGHT 2022"
+            size="14"
+            margin="auto"
             bold
             css={style.flex}
           />

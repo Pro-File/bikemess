@@ -5,7 +5,6 @@ import CategoriesPage from "./Containers/CategoiesPage/CategoriesPage";
 import LandingPage from "./Containers/LandingPage/index";
 import LayoutWrapper from "./Layout/LayoutWrapper";
 import AddListings from "./Containers/AddListings";
-import Brands from "./Containers/Brands";
 import AdminLogin from "./Containers/AdminPanel/AdminLogin/AdminLogin";
 import { db } from "./Services/firebaseConfig";
 import { useDispatch } from "react-redux";
@@ -69,37 +68,35 @@ function App() {
       <Switch>
         <LayoutWrapper>
           {/* Admin Routes */}
-          <PublicRoute path='/admin-login' component={AdminLogin} />
+          <PublicRoute path="/admin-login" component={AdminLogin} />
           <ProtectedRoute
-            path='/admin-profile'
+            path="/admin-profile"
             component={AdminDashboard}
             children={<AdminProfile />}
           />
-          <ProtectedRoute path='/list/:id' component={EditListing} />
+          <ProtectedRoute path="/list/:id" component={EditListing} />
           <ProtectedRoute
-            path='/admin-requests'
+            path="/admin-requests"
             component={AdminDashboard}
             children={<AdminRequests />}
           />
           <ProtectedRoute
-            path='/admin-adminListing'
+            path="/admin-adminListing"
             component={AdminDashboard}
             children={<AdminListing />}
           />
           <ProtectedRoute
-            path='/admin-dashboard'
+            path="/admin-dashboard"
             component={AdminDashboard}
             children={<Dashboard />}
           />
 
           {/* Customer Routes */}
-          <Route path='/' exact component={LandingPage} />
-          <Route path='/categories' component={CategoriesPage} exact />
-          <Route path='/categories/:cat' component={CategoriesPage} exact />
-          <Route path='/add-new-listing' component={AddListings} exact />
-          <Route path='/categories-retail' component={CategoriesPage} exact />
-
-          <Route path='/brands' component={Brands} exact />
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/categories" component={CategoriesPage} exact />
+          <Route path="/categories/:cat" component={CategoriesPage} exact />
+          <Route path="/add-new-listing" component={AddListings} exact />
+          <Route path="/categories-retail" component={CategoriesPage} exact />
         </LayoutWrapper>
       </Switch>
     </div>

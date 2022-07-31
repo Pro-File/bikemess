@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 const items = [
   {
     label: (
-      <Link to='/categories'>
+      <Link to="/categories">
         <SimpleParagraph
-          paragraph='BROWSE BY CATEGORIES'
-          size='14'
+          paragraph="BROWSE BY CATEGORIES"
+          size="14"
           bold
           css={style.letterSpacing}
         />
@@ -19,42 +19,29 @@ const items = [
     key: "SubMenu",
     children: [
       {
-        label: <Link to='/categories/mtb'>MTB</Link>,
+        label: <Link to="/categories/mtb">MTB</Link>,
         key: "MTB",
       },
       {
-        label: <Link to='/categories/road-bike'>Road Bike</Link>,
+        label: <Link to="/categories/road-bike">Road Bike</Link>,
         key: "Road Bike",
       },
       {
-        label: <Link to='/categories/foldies'>Folding Bike</Link>,
+        label: <Link to="/categories/foldies">Folding Bike</Link>,
         key: "Folding Bike",
       },
       {
-        label: <Link to='/categories/e-bike'>E Bike</Link>,
+        label: <Link to="/categories/e-bike">E Bike</Link>,
         key: "E Bike",
       },
     ],
   },
   {
     label: (
-      <Link to='/brands'>
+      <Link to="/categories-retail">
         <SimpleParagraph
-          paragraph='BROWSE BY BRANDS'
-          size='14'
-          bold
-          css={style.letterSpacing}
-        />
-      </Link>
-    ),
-    key: "mail",
-  },
-  {
-    label: (
-      <Link to='/categories-retail'>
-        <SimpleParagraph
-          paragraph='BROWSE BY LBS'
-          size='14'
+          paragraph="BROWSE ALPHABETICALLY"
+          size="14"
           bold
           css={style.letterSpacing}
         />
