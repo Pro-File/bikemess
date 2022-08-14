@@ -47,7 +47,7 @@ const LandingPage = () => {
               cssClass={style.fontFamily}
             />
           </div>
-          <div className={style.gap}>
+          {/* <div className={style.gap}>
             <SimpleParagraph paragraph="What are you looking for ?" size="14" />
             <Row gutter={[8, 8]}>
               <Col lg={20} md={20} sm={20} xs={20}>
@@ -70,7 +70,7 @@ const LandingPage = () => {
                 />
               </Col>
             </Row>
-          </div>
+          </div> */}
           <div className={style.gap}>
             <SimpleParagraph
               paragraph="SCROLL DOWN TO LEARN"
@@ -160,7 +160,7 @@ const LandingPage = () => {
             size="large"
             icon={<ArrowRightOutlined />}
             cssClass={style.addListingBtn}
-            onClick={redirectTolisting}
+            /*onClick={redirectTolisting}*/
           />
         </Col>
         <Col

@@ -72,12 +72,12 @@ const Header = () => {
               <MenuItem />
 
               <div>
-                <OutlineButton
+                {/* <OutlineButton
                   text='ADD NEW RETAIL LISTINGS'
                   size='large'
                   cssClass={style.addListingBtn}
                   onClick={redirectToAddListing}
-                />
+                /> */}
               </div>
             </div>
           </Col>

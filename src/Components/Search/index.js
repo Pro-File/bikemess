@@ -80,7 +80,7 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
             className={style.simple}
             onClick={() => setSearchVisible(true)}
           >
-            <u>Change search</u>
+            <u>click here to search</u>
           </Button>
         </div>
       )}

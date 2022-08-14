@@ -20,14 +20,14 @@ const NotificationBanner = ({ notificationData }) => {
         size='16'
         margin='0px 10px'
       />
-      <Link to='/add-new-listing'>
+      {/* <Link to='/add-new-listing'>
         <OutlineButton
           text='ADD NEW LISTING'
           size='small'
           icon={<ArrowRightOutlined />}
           cssClass={style.addListingBtn}
         />
-      </Link>
+      </Link> */}
     </div>
   );
 };

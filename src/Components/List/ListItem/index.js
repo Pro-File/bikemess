@@ -154,13 +154,13 @@ const ListItem = ({ item }) => {
           <div className={style.imageSection}>
             <Image width={100} height={100} src={item.logo} />
           </div>
-          <Link to={"/"}>
+          {/* <Link to={"/"}>
             <SimpleParagraph
               paragraph=' Missing or wrong information?'
               size={14}
               css={style.paraLink}
             />
-          </Link>
+          </Link> */}
         </Col>
         <Col lg={18}>
           <Row>
@@ -236,13 +236,13 @@ const ListItem = ({ item }) => {
         <Col lg={6} md={8}>
           {/* If User then Show it Otherwise not */}
 
-          <div onClick={showModal}>
+          {/* <div onClick={showModal}>
             <SimpleParagraph
               paragraph='Update information?'
               size={14}
               css={style.updateInfo}
             />
-          </div>
+              </div> */}
         </Col>
         <Col lg={18} md={16}>
           <SimpleHeading heading={"Brands:"} size={14} weight={"bold"} />
