@@ -18,22 +18,6 @@ const Footer = () => {
     <div>
       <Row className={style.footerWrapper}>
         <Col lg={12} md={12}>
-          {/* <Row gutter={[8, 8]}>
-            <Col lg={12} md={12} sm={20} xs={20}>
-              <TextBox
-                name='subscribe'
-                placeholder='Subscribe for updates'
-                type='search'
-                change={(value) => {
-                  searchUser(value.target.value);
-                }}
-                value={search}
-              />
-            </Col>
-            <Col lg={2} md={2} sm={4} xs={4}>
-              <RoundButton type='primary' icon={Arrow} />
-            </Col>
-          </Row> */}
           <Row>
             <Col lg={24}>
               <div className={style.footerTextWrapper}>
@@ -73,13 +57,6 @@ const Footer = () => {
                     alt="Facebook"
                   />
                 </a>
-                {/* <Image
-                  src={Instagram}
-                  preview={false}
-                  width={48}
-                  alt='Instagram'
-                />
-                <Image src={Twitter} preview={false} width={48} alt='Twitter' /> */}
               </div>
             </Col>
           </Row>

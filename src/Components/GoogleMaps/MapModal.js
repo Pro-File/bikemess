@@ -5,7 +5,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { useDispatch } from "react-redux";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import Location from "../../Assests/Location.png";
 import GoogleMaps from "./MyGoogleMaps";
 import style from "./index.module.less";
 import { OutlineButton, SimpleButton } from "../common/Buttons";
@@ -39,16 +38,16 @@ export default function MapModal(props) {
       />
       <div className={style.buttonWrapper}>
         <OutlineButton
-          text='Cancel'
-          size='large'
+          text="Cancel"
+          size="large"
           onClick={props.handleClose}
           css={style.outlineBtn}
         />
         <SimpleButton
-          type='primary'
-          size='large'
-          shape='round'
-          text='Confirm'
+          type="primary"
+          size="large"
+          shape="round"
+          text="Confirm"
           css={style.simpleBtn}
           onClick={() => {
             dispatch(setGlobalMapAddress(checkOutMapAddress));
@@ -61,14 +60,13 @@ export default function MapModal(props) {
 
   return (
     <div>
-       <SimpleButton
-              type='primary'
-              size='small'
-              shape='round'
-              text='PIN MAP LOCATION'
-              onClick={() => props.handleOpen()}
-              imageSource={Location}
-            />
+      <SimpleButton
+        type="primary"
+        size="small"
+        shape="round"
+        text="PIN ADDRESS"
+        onClick={() => props.handleOpen()}
+      />
 
       <Dialog
         maxWidth={"lg"}
@@ -77,10 +75,10 @@ export default function MapModal(props) {
         scroll={"body"}
         open={props.open}
         onClose={props.handleClose}
-        aria-labelledby='alert-dialog-slide-title'
-        aria-describedby='alert-dialog-slide-description'
+        aria-labelledby="alert-dialog-slide-title"
+        aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle id='alert-dialog-slide-title'>
+        <DialogTitle id="alert-dialog-slide-title">
           {"Where is your Bikemess Shop located at ?"}
         </DialogTitle>
 

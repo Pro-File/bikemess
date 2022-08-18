@@ -15,36 +15,36 @@ const NoResultsFound = () => {
         <SimpleParagraph
           paragraph={"Oops! We can’t seem to find what you are looking for."}
           size={16}
-          margin = {"15px 0px"}
+          margin={"15px 0px"}
         />
         <SimpleParagraph
           paragraph={
             "  Maybe try a different search or add a new directory listing if you know anyone or LBS that sells this item."
           }
           size={16}
-          margin = {"15px 0px"}
+          margin={"15px 0px"}
         />
         <SimpleParagraph
           paragraph={
             " Not only would this be a great help to us, but also to your community looking for the same stuff as you! "
           }
           size={16}
-          margin = {"15px 0px"}
+          margin={"15px 0px"}
         />
       </div>
       <div className={style.noResultButtonsContainer}>
-      <Button
-            variant="transparent"
-            className={style.simple}
-            onClick={() => history.push("")}
-          >
-            <u>Try a new Search</u>
-          </Button>
-          <OutlineButton
-            text='ADD NEW DIRECTORY LISTING'
-            size='small'
-            cssClass={style.addNewBtn}
-          />
+        <Button
+          variant="transparent"
+          className={style.simple}
+          onClick={() => document.getElementById("search").focus()}
+        >
+          <u>Try a new Search</u>
+        </Button>
+        <OutlineButton
+          text="ADD NEW DIRECTORY LISTING"
+          size="small"
+          cssClass={style.addNewBtn}
+        />
       </div>
     </div>
   );

@@ -12,7 +12,14 @@ import { addSearchingKeyword } from "../../Redux/Slices/AllListing";
 import { useHistory } from "react-router-dom";
 import { ClearOutlined } from "@ant-design/icons";
 
-const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
+const SearchComponent = ({
+  search,
+  setSearch,
+  onSearch,
+  onClear,
+  form,
+  searchedKeyword,
+}) => {
   const [searchVisible, setSearchVisible] = useState(false);
 
   return (
@@ -20,14 +27,15 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
       {searchVisible ? (
         <div className={style.searchOverHead}>
           <div className={style.gap}>
-            <SimpleParagraph paragraph='You are searching for ?' size='14' />
+            <SimpleParagraph paragraph="You are searching for ?" size="14" />
             <Row gutter={[8, 8]}>
               <Col lg={18}>
-                <Form form={form} layout='vertical' autoComplete='off'>
+                <Form form={form} layout="vertical" autoComplete="off">
                   <TextBox
-                    name='subscribe'
-                    placeholder='Enter Your Keywords here'
-                    type='search'
+                    name="subscribe"
+                    id='search'
+                    placeholder="Enter Your Keywords here"
+                    type="search"
                     change={(value) => {
                       setSearch(value.target.value);
                     }}
@@ -39,7 +47,7 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
                 <Row gutter={[8, 0]}>
                   <Col>
                     <RoundButton
-                      type='primary'
+                      type="primary"
                       icon={Arrow}
                       onClick={() => onSearch()}
                     />
@@ -47,7 +55,7 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
                   {search && (
                     <Col>
                       <RoundButton
-                        type='secondary'
+                        type="secondary"
                         icon={Close}
                         onClick={() => onClear(form)}
                       />
@@ -58,7 +66,7 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
             </Row>
           </div>
           <Button
-            variant='transparent'
+            variant="transparent"
             className={style.simple}
             onClick={() => setSearchVisible(false)}
           >
@@ -67,16 +75,16 @@ const SearchComponent = ({ search, setSearch, onSearch, onClear, form }) => {
         </div>
       ) : (
         <div className={style.searchOverHead}>
-          {search && (
+          {searchedKeyword && (
             <SimpleParagraph
-              paragraph={`SEARCH RESULTS FOR “${search}”`}
-              size='18'
+              paragraph={`SEARCH RESULTS FOR “${searchedKeyword}”`}
+              size="18"
               bold={false}
               css={style.searchOverHeadMain}
             />
           )}
           <Button
-            variant='transparent'
+            variant="transparent"
             className={style.simple}
             onClick={() => setSearchVisible(true)}
           >

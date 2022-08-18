@@ -32,25 +32,6 @@ export const checkURL = (code) => {
   return re.test(code);
 };
 
-export const login = ({ email, password }) =>
-  auth().signInWithEmailAndPassword(email, password);
-
-const confirmOldPassword = (oldPassword) => {
-  const user = auth().currentUser;
-  const credential = auth.EmailAuthProvider.credential(
-    auth().currentUser.email,
-    oldPassword
-  );
-  return user.reauthenticateWithCredential(credential);
-};
-const setNewPassword = (newPassword) => {
-  const user = auth().currentUser;
-  return user.updatePassword(newPassword);
-};
-
 export const global = {
   uploadImage,
-  login,
-  setNewPassword,
-  confirmOldPassword,
 };
