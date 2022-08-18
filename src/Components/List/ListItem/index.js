@@ -19,6 +19,7 @@ import { reqType } from "./constant";
 import { Textarea } from "../../common/Forms/TextArea";
 import { db } from "../../../Services/firebaseConfig";
 import { useSelector } from "react-redux";
+import { ListItemSecondaryAction } from "@mui/material";
 
 const ListItem = ({ item }) => {
   const searchedBrandName = useSelector(
@@ -246,31 +247,55 @@ const ListItem = ({ item }) => {
         </Col>
         <Col lg={18} md={16}>
           <SimpleHeading heading={"Brands:"} size={14} weight={"bold"} />
-          {item.brands.map((brand) => {
-            if (
-              (searchedBrandName &&
-                brand
-                  .toLowerCase()
-                  .includes(searchedBrandName.toLowerCase())) ||
-              (selectedRetailer &&
-                brand.toLowerCase().includes(selectedRetailer.toLowerCase()))
-            ) {
-              return (
-                <span
-                  className={`${style.brand} ${style.matchedBrand}`}
-                >{`${brand}, `}</span>
-              );
+          {item.brands.map((brand, index) => {
+            if (index<(item.brands.length-1)) {
+              if (
+                (searchedBrandName &&
+                  brand
+                    .toLowerCase()
+                    .includes(searchedBrandName.toLowerCase())) ||
+                (selectedRetailer &&
+                  brand.toLowerCase().includes(selectedRetailer.toLowerCase()))
+              ) {
+                return (
+                  <span
+                    className={`${style.brand} ${style.matchedBrand}`}
+                  >{`${brand}, `}</span>
+                );
+              }
+              return <span className={style.brand}>{`${brand}, `}</span>;
+            } else {
+              if (
+                (searchedBrandName &&
+                  brand
+                    .toLowerCase()
+                    .includes(searchedBrandName.toLowerCase())) ||
+                (selectedRetailer &&
+                  brand.toLowerCase().includes(selectedRetailer.toLowerCase()))
+              ) {
+                return (
+                  <span
+                    className={`${style.brand} ${style.matchedBrand}`}
+                  >{`${brand}. `}</span>
+                );
+              }
+              return <span className={style.brand}>{`${brand}. `}</span>;
             }
-            return <span className={style.brand}>{`${brand}, `}</span>;
+            
           })}
         </Col>
       </Row>
       <Row className={style.extraDetailsContainer}>
         <Col lg={6}></Col>
         <Col lg={18}>
-          {item.shops.map((info) => {
-            return <span>{`${info} | `}</span>;
-          })}
+          {item.shops.map((info, index) => {
+            if (index<(item.shops.length-1)) 
+            {
+              return <span>{`${info} | `}</span>;
+} else {
+  return <span>{`${info}  `}</span>;
+}
+})}
         </Col>
       </Row>
       <Divider className={style.divider} />

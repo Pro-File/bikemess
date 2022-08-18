@@ -65,7 +65,7 @@ const Footer = () => {
           <Row gutter={[8, 8]} className={style.rightSectionWrapper}>
             <Col className={style.rightSection}>
               <div className={style.iconWrapper}>
-                <a href={`//www.facebook.com/bikemessapp`} target="_blank">
+                <a href={`//www.facebook.com`} target="_blank">
                   <Image
                     src={Facebook}
                     preview={false}
