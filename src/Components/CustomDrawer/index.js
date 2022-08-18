@@ -57,8 +57,8 @@ const CustomDrawer = ({
           zIndex: 0,
         },
       }}
-      variant='persistent'
-      anchor='left'
+      variant="persistent"
+      anchor="left"
       open={open}
       PaperProps={{
         style: { height: "88vh", position: "absolute", top: "12%" },
@@ -67,10 +67,10 @@ const CustomDrawer = ({
       {!isMobile && (
         <div className={style.showMapIconContainer}>
           <SimpleButton
-            type='primary'
-            size='small'
-            shape='round'
-            text=' '
+            type="primary"
+            size="small"
+            shape="round"
+            text=" "
             icon={<ArrowLeftOutlined />}
             onClick={handleDrawerClose}
           />
@@ -81,6 +81,7 @@ const CustomDrawer = ({
         {!data[0]?.isNew && (
           <Search
             search={search}
+            searchedKeyword={searchedKeyword}
             setSearch={setSearch}
             onSearch={onSearch}
             onClear={onClear}

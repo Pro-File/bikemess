@@ -37,6 +37,7 @@ export default function CategoriesPage() {
   const drawerWidth = isMobile ? 50 : 100;
   const list = useSelector((state) => state.list);
   const allListItem = useSelector((state) => state.allListing.list);
+  const isLoading = useSelector((state) => state.allListing.loading);
   const [searchFlag, setSearchFlag] = useState(false);
   const [flag, setFlag] = useState(true);
 
@@ -334,74 +335,91 @@ export default function CategoriesPage() {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <CustomDrawer
-        open={open}
-        drawerWidth={drawerWidth}
-        data={data}
-        isMobile={isMobile}
-        search={search}
-        // searchedKeyword={searchedKeyword}
-        setSearch={setSearch}
-        onSearch={onSearch}
-        onClear={onClear}
-        handleDrawerClose={handleDrawerClose}
-        handleRegion={handleRegion}
-        regionState={regionState}
-        handleCategory={handleCategory}
-        categoryState={categoryState}
-        handleDetails={handleDetails}
-        deatilState={deatilState}
-        onChange={onChange}
-        removeFilters={removeFilters}
-        form={form}
-        selectorForm={selectorForm}
-      />
-      <Main open={open} className='custom-main'>
-        <div className='button-overhead'>
-          {!open ? (
-            <SimpleButton
-              type='primary'
-              size='small'
-              shape='round'
-              text='SHOW DIRECTORY LISTING'
-              onClick={handleDrawerOpen}
-            />
-          ) : (
-            <SimpleButton
-              type='primary'
-              size='small'
-              shape='round'
-              text=' '
-              icon={<ArrowLeftOutlined />}
-              onClick={handleDrawerClose}
-            />
-          )}
+      {isLoading ? (
+        <div
+          style={{
+            width: "100%",
+            height: "90vh",
+            display: "flex",
+            background: "#FFFFFF",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Spinner height={100} width={100} type="LineWave" />
         </div>
-        <div>
-          <AutoComplete
-            HandleTypedAddress={HandleTypedAddress}
-            setLatLang={setLatLang}
+      ) : (
+        <>
+          <CssBaseline />
+          <CustomDrawer
+            open={open}
+            drawerWidth={drawerWidth}
+            data={data}
+            isMobile={isMobile}
+            search={search}
+            searchedKeyword={searchedBrandName}
+            setSearch={setSearch}
+            onSearch={onSearch}
+            onClear={onClear}
+            handleDrawerClose={handleDrawerClose}
+            handleRegion={handleRegion}
+            regionState={regionState}
+            handleCategory={handleCategory}
+            categoryState={categoryState}
+            handleDetails={handleDetails}
+            deatilState={deatilState}
+            onChange={onChange}
+            removeFilters={removeFilters}
+            form={form}
+            selectorForm={selectorForm}
           />
-        </div>
-        <div>
-          {loading ? (
-            <div
-              style={{
-                width: "100%",
-                height: "600px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Spinner height={100} width={100} type='LineWave' />
+          <Main open={open} className="custom-main">
+            <div className="button-overhead">
+              {!open ? (
+                <SimpleButton
+                  type="primary"
+                  size="small"
+                  shape="round"
+                  text="SHOW DIRECTORY LISTING"
+                  onClick={handleDrawerOpen}
+                />
+              ) : (
+                <SimpleButton
+                  type="primary"
+                  size="small"
+                  shape="round"
+                  text=" "
+                  icon={<ArrowLeftOutlined />}
+                  onClick={handleDrawerClose}
+                />
+              )}
             </div>
-          ) : (
-            <GoogleMaps center={address.center} data={data} />
-          )}
-        </div>
-      </Main>
+            <div>
+              <AutoComplete
+                HandleTypedAddress={HandleTypedAddress}
+                setLatLang={setLatLang}
+              />
+            </div>
+            <div>
+              {loading ? (
+                <div
+                  style={{
+                    width: "100%",
+                    height: "600px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Spinner height={100} width={100} type="LineWave" />
+                </div>
+              ) : (
+                <GoogleMaps center={address.center} data={data} />
+              )}
+            </div>
+          </Main>
+        </>
+      )}
     </Box>
   );
 }

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialValue = {
   searchedKeyword: undefined,
+  loading: true,
   brandKeyword: undefined,
   list: [],
 };
@@ -13,6 +14,7 @@ const AllListing = createSlice({
       return {
         ...state,
         list: [...action.payload],
+        loading: false,
       };
     },
     addSearchingKeyword: (state, action) => {

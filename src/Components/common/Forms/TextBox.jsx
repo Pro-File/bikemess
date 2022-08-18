@@ -55,6 +55,7 @@ export const TextBox = ({
   type,
   validationKey,
   name,
+  id,
   hasFeedback,
   dependencies,
   className,
@@ -73,13 +74,14 @@ export const TextBox = ({
       name={name}
       hasFeedback={hasFeedback}
       dependencies={[dependencies]}
-      validateTrigger='onBlur'
+      validateTrigger="onBlur"
       className={style.textBoxWrapper}
       initialValue={value}
     >
       {type !== "password" ? (
         <Input
           disabled={disabled}
+          id={id}
           placeholder={placeholder}
           onChange={change || null}
           type={type}
